@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="1" author="luiz" context="16bits">
+        <validCheckSum></validCheckSum>
+        <sqlFile path="db/create.sql"/>
+    </changeSet>
+    <changeSet id="2" author="luiz" context="16bits">
+        <insert tableName="financialproduct">
+            <column name="id">1</column>
+            <column name="name">Buy BTC</column>
+            <column name="type">Individual</column>
+            <column name="available" valueBoolean="true"/>
+        </insert>
+        <insert tableName="financialproduct">
+            <column name="id">2</column>
+            <column name="name">Green fund</column>
+            <column name="type">Company</column>
+            <column name="available" valueBoolean="true"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
